@@ -1,0 +1,7 @@
+Some observable trends based on the data:
+
+1)We do the analysis to understand the purchasing trend of the people for different kinds of games based on their age, gender,
+2)There are about 1163 active players. Majority are male (84%). Number of Female players is smaller (14%).
+3)The highest age demographic falls between 20-24 yrs (44.8%)
+4)The second group falls between 15-19 yrs (18.60%)
+5)The rest of the people fall between 25-29yrs (13.4%)
