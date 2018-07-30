@@ -1,0 +1,3 @@
+1. CBS news have more positive sentiments
+2. CNN has the most negative sentiments
+3. Most of the Fox and NewYork times news have neutral sentiments
