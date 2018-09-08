@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<!-- Insert title here -->
+  <title>Max Temperature and Latitude Analysis</title>
+
+  <!-- reset css -->
+  <link rel="stylesheet" href="reset.css">
+  <!-- Bring in our bootstrap stylesheet -->
+  <link rel="stylesheet" 
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <!-- A black horizontal navbar that becomes vertical on small screens -->
+  <nav class="navbar navbar-expand-sm navbar-dark">
+    <a class="nav-link" href="index.html">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+        </button>
+    </a>
+    <ul class="navbar-nav">
+        <!-- Home button -->
+        <li class="nav-item active">
+            <a class="nav-link" href="index.html">  
+            Weather and Latitude</a>
+        </li>
+    </ul>
+
+    <!-- right side of navbar -->
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown ml-auto">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="navbarDropdownMenuLink" href="#" role="button" 
+            aria-haspopup="true" aria-expanded="false">Plot</a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="MaxTemp_pg.html">Max Temperature</a>
+                <a class="dropdown-item" href="Humidity_pg.html">Humidity</a>
+                <a class="dropdown-item" href="Cloudiness_pg.html">Cloudiness</a>
+                <a class="dropdown-item" href="WindSpeed_pg.html">Wind Speed </a>
+            </div>
+        </li> 
+        <li class="nav-item">
+            <a class="nav-link" href="Comparisons_pg.html">Comparison
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="Data_pg.html">Data</a>
+        </li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <div style="background-color:gray;">
+    <div class='row'>
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+            </br>
+            </br>
+        </div>
+        <div class="col-md-4">
+        </div>
+    </div>
+  </div> <!-- ends background div-->
+
+    <!-- Header -->
+<div class="container-fluid">
+    <div class='row align-items-center'>
+        <div class="col-md-4">
+            </br>
+            </br>
+        </div>
+        <div class="col-lg-7">
+            <h1 class="intro">Max Temperature and Latitude</h1>
+            </br>
+            </br>
+        </div>
+        <div class="col-md-1">
+            </br>
+            </br>
+        </div>
+    </div> 
+    
+    <div class="row">
+        <div class="col-lg-6">
+            </br>
+            <a target="_blank" href="resources\City Max Temperature vs. Latitude.png">
+                <img src="resources\City Max Temperature vs. Latitude.png"
+                alt = "Max Temp vs. Latitude" height="600" width="800">
+            </a>
+        </div>
+        <div class="col-lg-6">
+            <p class="description"> &emsp; This graph illustrates what is already common knowledge: that the closer an area is to 0&deg; 
+                latitude, the higher the temperature. Of note is the variation of temperatures between the north and south hemisphere
+                (i.e. between positive and negative latitude). At first glance, it appears that the process of randomly generating 
+                latitude and longitude led to cities in the northern hemisphere to be overrepresented. However, this is explained by the 
+                fact that there are more habited lands and more people living in the northern hemisphere than in the south. 
+                </br></br>
+                At this time of year, there are quite a number of cities that have a max temperature below 20&deg; fahrenheit and even 
+                some below 0&deg;. All of these countries are in the northern hemisphere, most likely in arctic areas.  
+                </br></br>
+                &emsp; Check out the navbar or click the images in the visualizations below for more graphs and analyses. You can also
+                get back to the project summary homepage by clicking "Weather and Latitude" on the top left. 
+            </p>
+        </div>
+    </div>
+</div> <!-- ends main content container after gray div bar -->  
+
+    <!-- Visualizations -->
+        <!-- Header -->
+    <div id = "bottom_visual_page" class="container"> 
+          <div class="row">
+              <div class="col-md-12">
+                  </br> <!-- line break to push header down -->
+              </div>
+          </div>
+          <hr> <!-- horizontal line -->
+
+          <!-- Header content for visualization section -->
+        <div id = "bottom_visual_page" class="container"> 
+          <div class="row align-items-center">
+              <div class = 'col-md-4'></br></br></br></div>
+              <div class="col-lg-4">
+                  <h3 id="bot_header">Visualizations</h3>
+              </div>
+              <div class = 'col-md-4'></br></br></br></div>
+          </div>
+  
+          <div class="row align-items-center">
+            <div class="col-lg-3">
+                <a href="MaxTemp_pg.html">
+                    <img src="resources\City Max Temperature vs. Latitude.png"
+                    alt = "Max Temp vs. Latitude" height="225" width="300">
+                </a>
+            </div>
+            <div class="col-lg-3">
+                <a href="Humidity_pg.html">
+                    <img src="resources\City Humidity vs. Latitude.png"
+                    alt = "Max Temp vs. Latitude" height="225" width="300">
+                </a>
+            </div>
+            <div class="col-lg-3">
+                <a href="Cloudiness_pg.html">
+                    <img src="resources\City Cloudiness vs. Latitude.png"
+                    alt = "Max Temp vs. Latitude" height="225" width="300">
+                </a>
+            </div>
+            <div class="col-lg-3">
+                <a href="WindSpeed_pg.html">
+                    <img src="resources\City Wind Speed vs. Latitude.png"
+                    alt = "Max Temp vs. Latitude" height="225" width="300">
+                </a>
+            </div>
+        </div>
+    
+        <!-- reference to github and my github page -->
+           <p> 
+            This page is hosted on Github. &emsp;
+            <a target="_blank" href="https://github.com/ppreeta/submithomework/tree/master/Web_Visualization_Dashboard-Latitude">
+                Web page repo link.
+            </a> &emsp;
+            <a target="_blank" href="https://github.com/ppreeta/submithomework/tree/master/PythonAPI">
+                Project repo link.
+            </a> &emsp;
+            <a target="_blank" href="https://github.com/ppreeta/">See more projects here!</a>
+            &emsp; Contact: ppreeta29@gmail.com
+        </p>
+        <hr>
+      </div>
+  
+
+
+</body>
+</html>

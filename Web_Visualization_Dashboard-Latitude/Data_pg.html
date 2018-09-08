@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<!-- Insert title here -->
+    <title>Data on Weather &amp; Latitude</title>
+
+    <!-- reset css -->
+    <link rel="stylesheet" href="reset.css">
+    <!-- Bring in our bootstrap stylesheet -->
+    <link rel="stylesheet" 
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <!-- javascript from w3schools to include convertcsv.htm table into current page -->
+    <script src="https://www.w3schools.com/lib/w3.js"></script> 
+</head>
+
+<body>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- A black horizontal navbar that becomes vertical on small screens -->
+    <nav class="navbar navbar-expand-sm navbar-dark">
+        <a class="nav-link" href="index.html">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button> 
+        </a>
+        <ul class="navbar-nav">
+            <!-- Home button -->
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">  
+                    Weather and Latitude</a>
+            </li>
+        </ul>
+
+    <!-- right side of navbar -->
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown ml-auto">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="navbarDropdownMenuLink" href="#" role="button" 
+            aria-haspopup="true" aria-expanded="false">Plot</a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="MaxTemp_pg.html">Max Temperature</a>
+                <a class="dropdown-item" href="Humidity_pg.html">Humidity</a>
+                <a class="dropdown-item" href="Cloudiness_pg.html">Cloudiness</a>
+                <a class="dropdown-item" href="WindSpeed_pg.html">Wind Speed </a>
+            </div>
+        </li> 
+        <li class="nav-item">
+            <a class="nav-link" href="Comparisons_pg.html">Comparison
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="Data_pg.html">Data</a>
+        </li>
+    </ul>
+    </nav>
+    <!-- Line Break -->
+    <div style="background-color:gray;">
+        <div class="row">
+            <div class="col-md-12">
+                </br>
+                </br>
+            </div>
+        </div>
+    </div> <!-- ends background color -->
+
+    <!-- Header -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <h1 class="intro"> City and Weather Data </h1>
+            </div>
+            <div class="col-md-4"> </br></br></br></br></br> </div>
+        </div>
+        <hr> <!-- horizontal line -->
+
+        <!-- Option to view dataset in it's own window -->
+        <div class="row">
+            <div class="col-md-4">
+                <p> <a  
+                    href="resources\convertcsv.htm"> Click here </a>
+                    to view just the dataset. 
+                </p> 
+            </div>
+            <div class="col-md-4">
+                </br>
+            </div>
+            <div class="col-md-4"></div>
+        </div> 
+           
+    <!-- Content: Data -->
+    <!-- *** Start table section *** -->
+    <!-- generated from http://www.convertcsv.com/csv-to-html.htm with citySample_dataframe.csv-->
+        <!-- Import converted csv files to table-->
+        <div w3-include-html="resources\convertcsv.htm"></div> 
+        <script>
+            w3.includeHTML();
+        </script>
+        <!-- End of table section -->
+
+    <!-- added row for spacing -->
+    <div class="row">
+        <div class="col-md-12">
+            </br> <!-- line break to push header down -->
+            <div id="bottom_space_data_pg" style="background-color:white;"> </div>
+        </div>
+    </div>
+
+    <!-- Visualizations -->
+    <!-- Header --> 
+        <!-- With new footer positions in the CSS file that forces it to the bottom! -->
+    <div id = "bottom_space_data_pg" class="container">
+        <div class="row">
+            <div class="col-md-12">
+                </br> <!-- line break to push header down -->
+            </div>
+        </div>
+        <!-- Header content for visualization section -->
+        <div class="row align-items-center">
+            <div class = 'col-md-4'></div>
+            <div class="col-lg-4">
+                <h3 id="bot_header"> Visualizations</h3>
+            </div>
+            <div class = 'col-md-4'></div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-3">
+                </br></br> <!-- Line spacing under visualization header -->
+                <a href="MaxTemp_pg.html">
+                    <img src="resources\City Max Temperature vs. Latitude.png"
+                    alt = "Max Temp vs. Latitude" height="225" width="300">
+                </a>
+            </div>
+            <div class="col-lg-3">
+                </br></br> <!-- Line spacing under visualization header -->
+                <a href="Humidity_pg.html">
+                        <img src="resources\City Humidity vs. Latitude.png"
+                        alt = "Max Temp vs. Latitude" height="225" width="300">
+                </a>
+            </div>
+            <div class="col-lg-3">
+                </br></br> <!-- Line spacing under visualization header -->
+                <a href="Cloudiness_pg.html">
+                    <img src="resources\City Cloudiness vs. Latitude.png"
+                    alt = "Max Temp vs. Latitude" height="225" width="300">
+                </a>
+            </div>
+            <div class="col-lg-3">
+                </br></br> <!-- Line spacing under visualization header -->
+                <a href="WindSpeed_pg.html">
+                        <img src="resources\City Wind Speed vs. Latitude.png"
+                        alt = "Max Temp vs. Latitude" height="225" width="300">
+                </a>
+            </div>
+        </div>
+    
+
+        <!-- reference to github and my github page -->
+        <p> 
+            This page is hosted on Github. &emsp;
+            <a target="_blank" href="https://github.com/ppreeta/submithomework/tree/master/Web_Visualization_Dashboard-Latitude">
+                Web page repo link.
+            </a> &emsp;
+            <a target="_blank" href="https://github.com/ppreeta/submithomework/tree/master/PythonAPI">
+                Project repo link.
+            </a> &emsp;
+            <a target="_blank" href="https://github.com/ppreeta/">See more projects here!</a>
+            &emsp; Contact: ppreeta29@gmail.com
+        </p>
+        <hr>
+    </div>
+    </div> <!-- ends bootstrap container for main content (maybe?) -->
+</body>
+</html>
