@@ -8,7 +8,7 @@ from selenium import webdriver
 
 def init_browser():
     executable_path={'executable_path': 'chromedriver.exe'}
-    return browser=Browser('chrome', **executable_path, headless=False)
+    return browser('chrome', **executable_path, headless=False)
 
 def scrape():
     browser = init_browser()
